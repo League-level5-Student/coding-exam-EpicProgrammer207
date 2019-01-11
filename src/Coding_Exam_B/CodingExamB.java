@@ -21,7 +21,7 @@ public class CodingExamB {
 			BufferedReader br = new BufferedReader(new FileReader(fileName));
 			for(int i = 1; i<=fileName.length(); i++) {
 				String s = br.readLine();
-				if(s.startsWith("//TODO")) {
+				if(s.contains("//TODO")) {
 					AllTodos+= fileName + "\n" + i + ": " + s + "\n" + "\n";
 				}
 			}

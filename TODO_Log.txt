@@ -1,6 +1,18 @@
 src/Coding_Exam_B/classes/Camera.java
 11: //TODO: Create different perspectives
 
+src/Coding_Exam_B/classes/RayTracedImageViewer.java
+27: 		//TODO: Needs testing
+
+src/Coding_Exam_B/classes/RayTracer.java
+22: 				//TODO: Make a Ray class
+
+src/Coding_Exam_B/classes/RayTracer.java
+25: 		//TODO: Display the final image
+
+src/Coding_Exam_B/classes/RayTracer.java
+29: 		//TODO: Create a Scene
+
 src/Coding_Exam_B/classes/Vector3.java
 3: //TODO: Create a Vector2 class
 
