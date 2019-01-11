@@ -1,0 +1,9 @@
+src/Coding_Exam_B/classes/Camera.java
+11: //TODO: Create different perspectives
+
+src/Coding_Exam_B/classes/Vector3.java
+3: //TODO: Create a Vector2 class
+
+src/Coding_Exam_B/classes/Vector3.java
+4: //TODO: Create a Vector4 class
+

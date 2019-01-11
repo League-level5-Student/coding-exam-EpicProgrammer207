@@ -16,6 +16,19 @@ public class CodingExamB {
 	
 	
 	public static String getLoggingInfo(String fileName) {
+		String AllTodos = "";
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(fileName));
+			for(int i = 1; i<=fileName.length(); i++) {
+				String s = br.readLine();
+				if(s.startsWith("//TODO")) {
+					AllTodos+= fileName + "\n" + i + ": " + s + "\n" + "\n";
+				}
+			}
+			br.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		/*
 		 * 1. Complete the getLoggingInfoMethod.
 		 *    The method takes in a String for a file and returns a String. 
@@ -25,7 +38,7 @@ public class CodingExamB {
 		 *    the line number for where each TODO was found. 
 		*/
 		
-		return "";
+		return AllTodos;
 	}
 	
 	public static void main(String[] args) {
@@ -33,7 +46,13 @@ public class CodingExamB {
 		finalLogString += getLoggingInfo("src/Coding_Exam_B/classes/RayTracedImageViewer.java");
 		finalLogString += getLoggingInfo("src/Coding_Exam_B/classes/RayTracer.java");
 		finalLogString += getLoggingInfo("src/Coding_Exam_B/classes/Vector3.java");
-		
+		try {
+			FileWriter fw = new FileWriter("TODO_Log.txt");
+			fw.write(finalLogString);
+			fw.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		/*
 		 * 2. Write the finalLogString to a file called TODO_Log.txt. The file should match TODO_Log_example.txt. 
 		 */
